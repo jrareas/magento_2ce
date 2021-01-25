@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # add MAGENTO_HOST to your hosts file if not a FQDN
+chsh -s /bin/bash www-data
 
 su www-data -c /var/www/magento/bin/magento setup:install \
 --base-url=http://$MAGENTO_HOST \
