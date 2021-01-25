@@ -2,7 +2,7 @@
 
 # add MAGENTO_HOST to your hosts file if not a FQDN
 
-/var/www/magento/bin/magento setup:install \
+su www-data -c /var/www/magento/bin/magento setup:install \
 --base-url=http://$MAGENTO_HOST \
 --db-host=$MAGENTO_DATABASE_HOST \
 --db-name=$MAGENTO_DATABASE_NAME \

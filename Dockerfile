@@ -33,5 +33,4 @@ RUN a2ensite vhost
 RUN chmod +x /app/docker/start.sh
 
 
-USER www-data
 CMD "/app/docker/start.sh"
