@@ -30,6 +30,8 @@ COPY ./conf/apache2/* /etc/apache2/sites-available/
 
 RUN a2ensite vhost
 
-
 RUN chmod +x /app/docker/start.sh
+
+
+USER www-data
 CMD "/app/docker/start.sh"
