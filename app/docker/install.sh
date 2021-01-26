@@ -16,6 +16,7 @@
 --timezone=$MAGENTO_TIMEZONE \
 --use-rewrites=1 \
 --elasticsearch-host=$ELASTICSEARCH_HOST \
---elasticsearch-port=$ELASTICSEARCH_PORT_NUMBER
+--elasticsearch-port=$ELASTICSEARCH_PORT_NUMBER \
+--elasticsearch-index-prefix=$ELASTICSEARCH_INDEX_PREFIX
 
 /var/www/magento/bin/magento module:disable Magento_TwoFactorAuth
