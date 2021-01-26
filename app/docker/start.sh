@@ -26,8 +26,8 @@ su www-data
 #chmod 777 -R /var/www/magento/generated
 #chmod 777 -R /var/www/magento/app/etc
 
-php /var/www/magento/bin/magento module:enable --all
-php /var/www/magento/bin/magento setup:di:compile;
+#php /var/www/magento/bin/magento module:enable --all
+#php /var/www/magento/bin/magento setup:di:compile;
 
 #exit # exit www-data user
 su /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
