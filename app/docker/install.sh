@@ -1,7 +1,7 @@
 #!/bin/bash
 
 /var/www/magento/bin/magento setup:install \
---base-url=http://$MAGENTO_HOST \
+--base-url=https://$MAGENTO_HOST \
 --db-host=$MAGENTO_DATABASE_HOST \
 --db-name=$MAGENTO_DATABASE_NAME \
 --db-user=$MAGENTO_DATABASE_USER \
