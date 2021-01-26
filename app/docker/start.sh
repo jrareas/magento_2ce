@@ -29,5 +29,5 @@ su www-data
 php /var/www/magento/bin/magento module:enable --all
 php /var/www/magento/bin/magento setup:di:compile;
 
-exit # exit www-data user
-/usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+#exit # exit www-data user
+su /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
