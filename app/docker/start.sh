@@ -1,6 +1,7 @@
 #!/bin/bash
+chsh -s /bin/bash www-data
 
-# add MAGENTO_HOST to your hosts file if not a FQDN
+su www-data
 /var/www/magento/bin/magento setup:install \
 --base-url=http://$MAGENTO_HOST \
 --db-host=$MAGENTO_DATABASE_HOST \
@@ -20,12 +21,13 @@
 
 # a2enmod mod_env
 # a2ensite vhost
-chown -R www-data:www-data /var/www/magento/
-chmod 777 -R /var/www/magento/var
-chmod 777 -R /var/www/magento/generated
-chmod 777 -R /var/www/magento/app/etc
+#chown -R www-data:www-data /var/www/magento/
+#chmod 777 -R /var/www/magento/var
+#chmod 777 -R /var/www/magento/generated
+#chmod 777 -R /var/www/magento/app/etc
 
 php bin/magento module:enable --all
 php bin/magento setup:di:compile;
 
- /usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
+exit # exit www-data user
+/usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf
