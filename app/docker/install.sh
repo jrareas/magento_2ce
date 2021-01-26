@@ -6,7 +6,7 @@
 --db-name=$MAGENTO_DATABASE_NAME \
 --db-user=$MAGENTO_DATABASE_USER \
 --db-password=$MAGENTO_DATABASE_PASSWORD \
---backend-frontname=$ADMIN_URI
+--backend-frontname=$MAGENTO_ADMIN_URI \
 --admin-firstname=$MAGENTO_ADMIN_FIRST_NAME \
 --admin-lastname=$MAGENTO_ADMIN_LAST_NAME \
 --admin-email=$MAGENTO_ADMIN_EMAIL \
