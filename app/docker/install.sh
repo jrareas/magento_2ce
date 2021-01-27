@@ -19,5 +19,7 @@
 --elasticsearch-port=$ELASTICSEARCH_PORT_NUMBER \
 --elasticsearch-index-prefix=$ELASTICSEARCH_INDEX_PREFIX
 
+/var/www/magento/bin/magento setup:upgrade
+/var/www/magento/bin/magento setup:static-content:deploy -f
 /var/www/magento/bin/magento cron:install
 /var/www/magento/bin/magento module:disable Magento_TwoFactorAuth
