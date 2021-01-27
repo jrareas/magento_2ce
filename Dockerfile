@@ -13,8 +13,6 @@ RUN composer create-project --repository-url=https://repo.magento.com/ magento/p
 
 WORKDIR /var/www/magento
 RUN composer require magepow/categories
-RUN bin/magento setup:upgrade
-RUN bin/magento setup:static-content:deploy -f
 
 USER root
 RUN a2enmod rewrite
