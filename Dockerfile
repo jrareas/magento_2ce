@@ -27,4 +27,6 @@ RUN a2ensite vhost
 RUN chmod +x /app/docker/start.sh
 
 
-CMD "/app/docker/start.sh"
+#CMD "/app/docker/start.sh"
+ENTRYPOINT ["/app/docker/start.sh"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
