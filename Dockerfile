@@ -13,6 +13,7 @@ RUN composer create-project --repository-url=https://repo.magento.com/ magento/p
 
 WORKDIR /var/www/magento
 RUN composer require magepow/categories
+RUN composer require mageplaza/module-smtp
 
 USER root
 RUN a2enmod rewrite

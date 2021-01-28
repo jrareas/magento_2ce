@@ -23,3 +23,4 @@
 /var/www/magento/bin/magento setup:static-content:deploy -f
 /var/www/magento/bin/magento cron:install
 /var/www/magento/bin/magento module:disable Magento_TwoFactorAuth
+/var/www/magento/bin/magento catalog:images:resize
