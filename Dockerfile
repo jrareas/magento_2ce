@@ -14,7 +14,7 @@ RUN composer create-project --repository-url=https://repo.magento.com/ magento/p
 WORKDIR /var/www/magento
 RUN composer require magepow/categories
 RUN composer require mageplaza/module-smtp
-RUN composer require mageplaza/magento-2-social-login
+#RUN composer require mageplaza/magento-2-social-login
 
 USER root
 RUN a2enmod rewrite
